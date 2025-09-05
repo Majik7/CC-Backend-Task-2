@@ -32,7 +32,7 @@ def typematchup():
         dtype = dtype.lower()
 
     if not atype and not dtype:
-        return {"message": "url syntax is /api?attacker={attacktype}&defender={defendtype} or /api/pokemon/{pokemon_name}"}
+        return {"message": "url syntax is /api?attacker={attacktype}&defender={defendtype} or /api/pokemon/{pokemon_name_or_id}"}
 
     elif atype and dtype:
         return {"attacker": atype, "defender": dtype, "multiplier": pokedf[atype][dtype]}
